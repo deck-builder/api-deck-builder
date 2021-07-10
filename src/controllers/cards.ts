@@ -3,9 +3,9 @@ import mtgClient from '../modules/mtgClient';
 
 export const getCards = async (req: Request, res: Response) => {
   try {
-    // const data = await mtgClient.get('/cards');
-    // return res.status(200).send(data);
-    return res.status(200).send('oi')
+    const response = await mtgClient.get('/cards', { params: { name: req.query.name }});
+    
+    return res.status(200).send(response.data.cards)
   } catch (error) {
     console.error(error);
     return res.status(500).send(error);
