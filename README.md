@@ -1,4 +1,16 @@
 # api-deck-builder
 
-> This API was not made by a backend developer, forgive my poor knowledge 🤦🏻‍♂️
+A simple API to get MTG cards & manage decks.
 
+## Run
+
+```bash
+yarn
+yarn start
+```
+
+You also can configure the port
+
+```bash
+yarn start -p 8080
+```
